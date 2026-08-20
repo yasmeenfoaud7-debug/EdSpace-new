@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصتي التعليمية الاحترافية | Professional Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styel.css">
+</head>
+<body>
+
+   
+    <header class="navbar">
+        <div class="logo">Edu<span class="highlight">Space</span></div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#hero" class="active">الرئيسية</a></li>
+                <li><a href="#features">المميزات</a></li>
+                <li><a href="#courses">الكورسات</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+        </nav>
+        <div class="auth-buttons">
+            <button class="btn-login" id="login-trigger">تسجيل الدخول</button>
+            <button class="btn-register" id="register-trigger">ابدأ الآن</button>
+        </div>
+    </header>
+
+    
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>طريقك الاحترافي لاحتراف <span class="highlight">البرمجة وتطوير الويب</span></h1>
+            <p>منصة تعليمية متكاملة مصممة خصيصاً لمساعدتك على بناء مشاريع حقيقية ودخول سوق العمل بجدارة.</p>
+            <div class="hero-btns">
+                <button class="btn-main" id="explore-btn">تصفح الكورسات</button>
+                <button class="btn-secondary" onclick="location.href='#contact'">اطلب تصميم مشابه</button>
+            </div>
+        </div>
+        
+            
+            
+        
+<div class="hero-image">
+    <img src="lap.jpg" alt="EdSpace Platform">
+</div>
+
+    </section>
+
+    
+    <section id="features" class="features">
+        <h2 class="section-title">لماذا تختار منصتنا؟</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fa-solid fa-laptop-code"></i>
+                <h3>تطبيق عملي</h3>
+                <p>مشاريع حقيقية تطبيقية بناءً على أحدث تقنيات السوق الدولي.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-bolt"></i>
+                <h3>سرعة وأداء عالي</h3>
+                <p>أكواد نظيفة ومنظمة تضمن لك سرعة تحميل مذهلة وتجربة مستخدم سلسة.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-headset"></i>
+                <h3>دعم مستمر</h3>
+                <p>متابعة ودعم فني على مدار الساعة لضمان نجاح مشروعك التعليمي.</p>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="courses" class="courses-section">
+        <h2 class="section-title">أحدث الكورسات المتاحة</h2>
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-img bg-1">Front-End Complete</div>
+                <div class="course-info">
+                    <h3>دبلومة تطوير واجهات الويب</h3>
+                    <p>تعلم HTML, CSS, JavaScript, React من الصفر حتى الاحتراف.</p>
+                    <div class="course-footer">
+                        <span class="price">$150</span>
+                        <button class="btn-enroll">سجل الآن</button>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-img bg-2">UI/UX Design</div>
+                <div class="course-info">
+                    <h3>تصميم واجهات المستخدم</h3>
+                    <p>احتراف برنامج Figma وتصميم تجارب مستخدم مذهلة ومريحة.</p>
+                    <div class="course-footer">
+                       <span class="price">$120</span>
+                        <button class="btn-enroll">سجل الآن</button>
+                    </div>
+                </div>
+            </div>
+            <div class="course-card">
+                <div class="course-img bg-3">JavaScript Master</div>
+                <div class="course-info">
+                    <h3>أساسيات البرمجة المتقدمة</h3>
+                    <p>فهم لغة JavaScript بعمق مع تطبيقات وبناء مشاريع حقيقية.</p>
+                    <div class="course-footer">
+                        <span class="price">$90</span>
+                        <button class="btn-enroll">سجل الآن</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">تواصل معنا واستفسر عن مشروعك</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>معلومات التواصل</h3>
+                <p><i class="fa-solid fa-phone"></i> +20 123 456 7890</p>
+                <p><i class="fa-solid fa-envelope"></i> contact@eduspace.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> القاهرة، مصر - متاح عمل عن بُعد</p>
+            </div>
+            <form id="contact-form" class="contact-form">
+                <input type="text" id="name" placeholder="اسمك الكريم" required>
+                <input type="email" id="email" placeholder="بريدك الإلكتروني" required>
+                <textarea id="message" placeholder="رسالتك أو تفاصيل الطلب..." rows="4" required></textarea>
+                <button type="submit" class="btn-main">إرسال الرسالة</button>
+            </form>
+        </div>
+    </section>
+    
+
+    
+    <footer>
+        <p>جميع الحقوق محفوظة © 2026 | تم التطوير بقلم Front-End Developer محترف</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
