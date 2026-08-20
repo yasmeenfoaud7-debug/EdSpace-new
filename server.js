@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const path = require('path');
 require('dotenv').config();
 
 const app = express();
@@ -9,9 +10,12 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Home Route
+// لخدمة ملفات الواجهة الأمامية (HTML, CSS, JS) من المجلد الحالي
+app.use(express.static(__dirname));
+
+// الصفحة الرئيسية بتعرض ملف index.html بتاعك
 app.get('/', (req, res) => {
-    res.send('Server is running!');
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Database Connection
