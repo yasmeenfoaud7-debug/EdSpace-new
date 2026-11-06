@@ -1,65 +1,59 @@
+document.addEventListener('DOMContentLoaded', () => {
+    fetchTeachers();
 
-const signupForm = document.getElementById('signupForm');
-if (signupForm) {
-    signupForm.addEventListener('submit', async function(e) {
-        e.preventDefault(); 
+    const bookingForm = document.getElementById('bookingForm');
+    if (bookingForm) {
+        bookingForm.addEventListener('submit', handleBooking);
+    }
+});
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
 
-        try {
-            const response = await fetch('http://localhost:5000/api/auth/register', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ name, email })
-            });
+async function fetchTeachers() {
+    try {
+        const res = await fetch('/api/teachers');
+        const teachers = await res.json();
+        
+        const container = document.getElementById('teachersContainer');
+        if (!container || teachers.length === 0) return;
 
-            const data = await response.json();
-            
-            if (response.ok) {
-                alert('تم التسجيل بنجاح!');
-                console.log(data);
-            } else {
-                alert('خطأ: ' + data.message);
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('تعذر الاتصال بالسيرفر');
-        }
-    });
+        container.innerHTML = teachers.map(t => 
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 text-center p-6">
+                <img src="${t.photo}" alt="${t.name}" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-blue-50" />
+                <h3 class="font-bold text-xl text-slate-800">${t.name}</h3>
+                <p class="text-blue-600 font-medium text-sm mt-1">${t.subject}</p>
+                <p class="text-slate-500 text-sm mt-3">${t.bio}</p>
+            </div>
+        ).join('');
+    } catch (err) {
+        console.error('خطأ في جلب بيانات المدرسين:', err);
+    }
 }
 
 
-const loginBtn = document.getElementById('loginBtn');
-if (loginBtn) {
-    loginBtn.addEventListener('click', async function(e) {
-        e.preventDefault();
+async function handleBooking(e) {
+    e.preventDefault();
 
-        const email = document.getElementById('emailInput').value;
-        const password = document.getElementById('passwordInput').value;
+    const bookingData = {
+        studentName: e.target[0].value,
+        studentPhone: e.target[1].value,
+        parentPhone: e.target[2].value,
+        grade: e.target[3].value
+    };
 
-        try {
-            const response = await fetch('http://localhost:5000/api/auth/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ email, password })
-            });
+    try {
+        const res = await fetch('/api/book', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(bookingData)
+        });
 
-            const data = await response.json();
-
-            if (response.ok) {
-                alert('تم تسجيل الدخول بنجاح!');
-                console.log(data);
-            } else {
-                alert('خطأ: ' + data.message);
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            alert('تعذر الاتصال بالسيرفر');
+        if (res.ok) {
+            alert('تم تسجيل طلب الحجز في سنتر المجد بنجاح!');
+            e.target.reset();
+        } else {
+            alert('حدث خطأ أثناء الحجز، يرجى المحاولة لاحقاً.');
         }
-    });
+    } catch (err) {
+        console.error('خطأ في الاتصال بالسيرفر:', err);
+    }
 }

@@ -1,138 +1,211 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصتي التعليمية الاحترافية | Professional Platform</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="styel.css">
+    <title>سنتر التفوق التعليمي | للثانوية العامة</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="bg-slate-50 font-['Tajawal'] text-slate-800">
 
    
-    <header class="navbar">
-        <div class="logo">Edu<span class="highlight">Space</span></div>
-        <nav class="nav-links">
-            <ul>
-                <li><a href="#hero" class="active">الرئيسية</a></li>
-                <li><a href="#features">المميزات</a></li>
-                <li><a href="#courses">الكورسات</a></li>
-                <li><a href="#contact">تواصل معنا</a></li>
-            </ul>
-        </nav>
-        <div class="auth-buttons">
-            <button class="btn-login" id="login-trigger">تسجيل الدخول</button>
-            <button class="btn-register" id="register-trigger">ابدأ الآن</button>
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3 space-x-reverse">
+                <span class="text-2xl font-extrabold text-blue-900">سنتر <span class="text-amber-500">التفوق</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 space-x-reverse font-medium">
+                <a href="#teachers" class="hover:text-blue-700 transition">المدرسين</a>
+                <a href="#lessons" class="hover:text-blue-700 transition">حصص الشرح</a>
+                <a href="#books" class="hover:text-blue-700 transition">الكتب والملازم</a>
+                <a href="#booking" class="hover:text-blue-700 transition">الحجز والمواعيد</a>
+            </div>
+            <a href="#booking" class="bg-blue-800 text-white px-5 py-2.5 rounded-xl font-bold hover:bg-blue-900 transition shadow-md">احجز مقعدك الآن</a>
         </div>
-    </header>
+    </nav>
 
-    
-    <section id="hero" class="hero">
-        <div class="hero-content">
-            <h1>طريقك الاحترافي لاحتراف <span class="highlight">البرمجة وتطوير الويب</span></h1>
-            <p>منصة تعليمية متكاملة مصممة خصيصاً لمساعدتك على بناء مشاريع حقيقية ودخول سوق العمل بجدارة.</p>
-            <div class="hero-btns">
-                <button class="btn-main" id="explore-btn">تصفح الكورسات</button>
-                <button class="btn-secondary" onclick="location.href='#contact'">اطلب تصميم مشابه</button>
+   
+    <section class="relative bg-gradient-to-br from-blue-900 via-slate-900 to-slate-800 text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="bg-amber-500/20 text-amber-300 border border-amber-500/30 text-xs px-3 py-1 rounded-full font-bold">عام دراسي جديد 2026/2027</span>
+                <h1 class="text-4xl md:text-5xl font-extrabold mt-4 leading-tight">طريقك المضمون للتفوق في الثانوية العامة</h1>
+                <p class="text-slate-300 mt-4 text-lg">أقوى نخبة من معلمي الثانوية العامة في مصر، مع مذكرات مجابة وشرح تفاعلي داخل القاعات الحقيقية وخارجها.</p>
+                <div class="mt-8 flex gap-4">
+                    <a href="#booking" class="bg-amber-500 text-slate-900 px-6 py-3 rounded-xl font-bold hover:bg-amber-400 transition">احجز حصتك المبدئية</a>
+                    <a href="#lessons" class="border border-white/30 px-6 py-3 rounded-xl font-bold hover:bg-white/10 transition">مشاهدة عينة للشرح</a>
+                </div>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10">
+               
+                <img src="سنتر.jpg" alt="قاعة السنتر" class="w-full h-80 object-cover">
             </div>
         </div>
+    </section>
+
+    
+    <section id="teachers" class="py-16 max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-blue-950 mb-3">نخبة من أفضل المعلمين</h2>
+        <p class="text-center text-slate-500 mb-12">خبرة طويلة في المناهج المصرية وتدريب الطلاب على نظام الامتحانات الحديث</p>
         
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 text-center p-6">
+                <img src="محمد.jpg" alt="معلم" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-blue-50">
+                <h3 class="font-bold text-xl text-slate-800">أ/ محمد العراقي</h3>
+                <p class="text-blue-600 font-medium text-sm mt-1">مدرس أول الفيزياء والتطبيقات</p>
+                <p class="text-slate-500 text-sm mt-3">خريج علوم جامعة المنصورة، خبرة أكثر من 12 عاماً في تبسيط الفيزياء الحديثة.</p>
+ </div>
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 text-center p-6">
+                <img src="سارة.jpg" alt="معلمة" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-blue-50">
+                <h3 class="font-bold text-xl text-slate-800">د/ سارة محمود</h3>
+                <p class="text-blue-600 font-medium text-sm mt-1">خبيرة اللغة العربية والترشيح الوزاري</p>
+                <p class="text-slate-500 text-sm mt-3">متخصصة في النحو والبلاغة وتدريب الطلاب على النظام الحديث للثانوية العامة.</p>
+            </div>
+            <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 text-center p-6">
+                <img src="محمود.jpg" alt="معلم" class="w-32 h-32 object-cover rounded-full mx-auto mb-4 border-4 border-blue-50">
+                <h3 class="font-bold text-xl text-slate-800">أ/ محمود عبد الله</h3>
+                <p class="text-blue-600 font-medium text-sm mt-1">مدرس الأحياء والجيولوجيا</p>
+                <p class="text-slate-500 text-sm mt-3">شرح تفاعلي ورسوم توضيحية لربط المنهج بالفهم الحقيقي والتطبيقات العملية.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="lessons" class="py-16 bg-slate-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-blue-950 mb-3">محاضرات وشرح عينة مجانية</h2>
+            <p class="text-center text-slate-500 mb-12">شاهد طريقتنا في الشرح قبل الانضمام لمجموعات السنتر</p>
             
-            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 transition hover:-translate-y-1">
+                    <a href="https://youtu.be/jnZe3Z-8ezA" target="_blank" class="block relative w-full h-48 bg-black overflow-hidden group">
+                        <img src="https://img.youtube.com/vi/jnZe3Z-8ezA/hqdefault.jpg" alt="ختام الدعامة في الإنسان" class="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-12 h-12 bg-red-600/90 text-white rounded-full flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition cursor-pointer">▶️</div>
+                        </div>
+                    </a>
+                    <div class="p-4">
+                        <span class="inline-block bg-sky-100 text-sky-700 text-xs px-2.5 py-1 rounded-md font-bold mb-2">أحياء</span>
+                        <h3 class="font-bold text-slate-800 text-base mb-1">ختام الدعامة في الإنسان</h3>
+                        <p class="text-slate-500 text-sm">د/ أحمد الجوهري</p>
+                    </div>
+                </div>
+
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 transition hover:-translate-y-1">
+                    <a href="https://youtu.be/U3Rq1YMcpQU" target="_blank" class="block relative w-full h-48 bg-black overflow-hidden group">
+                        <img src="https://img.youtube.com/vi/U3Rq1YMcpQU/hqdefault.jpg" alt="محاضرة الفيزياء" class="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-12 h-12 bg-red-600/90 text-white rounded-full flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition cursor-pointer">▶️</div>
+                        </div>
+                    </a>
+                    <div class="p-4">
+                        <span class="inline-block bg-amber-100 text-amber-700 text-xs px-2.5 py-1 rounded-md font-bold mb-2">فيزياء</span>
+                        <h3 class="font-bold text-slate-800 text-base mb-1">محاضرة الفيزياء</h3>
+                        <p class="text-slate-500 text-sm">مستر/ حسام أمين</p>
+                    </div>
+                </div>
+
         
-<div class="hero-image">
-    <img src="lap.jpg" alt="EdSpace Platform">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-md border border-slate-100 transition hover:-translate-y-1">
+                    <a href="https://youtu.be/tdH0-OCZhRQ" target="_blank" class="block relative w-full h-48 bg-black overflow-hidden group">
+                        <img src="https://img.youtube.com/vi/tdH0-OCZhRQ/hqdefault.jpg" alt="مراجعة كاملة" class="w-full h-full object-cover opacity-85 group-hover:opacity-100 transition">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-12 h-12 bg-red-600/90 text-white rounded-full flex items-center justify-center text-lg shadow-lg group-hover:scale-110 transition cursor-pointer">▶️</div>
 </div>
-
-    </section>
-
-    
-    <section id="features" class="features">
-        <h2 class="section-title">لماذا تختار منصتنا؟</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <i class="fa-solid fa-laptop-code"></i>
-                <h3>تطبيق عملي</h3>
-                <p>مشاريع حقيقية تطبيقية بناءً على أحدث تقنيات السوق الدولي.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fa-solid fa-bolt"></i>
-                <h3>سرعة وأداء عالي</h3>
-                <p>أكواد نظيفة ومنظمة تضمن لك سرعة تحميل مذهلة وتجربة مستخدم سلسة.</p>
-            </div>
-            <div class="feature-card">
-                <i class="fa-solid fa-headset"></i>
-                <h3>دعم مستمر</h3>
-                <p>متابعة ودعم فني على مدار الساعة لضمان نجاح مشروعك التعليمي.</p>
-            </div>
-        </div>
-    </section>
-
-    
-    <section id="courses" class="courses-section">
-        <h2 class="section-title">أحدث الكورسات المتاحة</h2>
-        <div class="courses-grid">
-            <div class="course-card">
-                <div class="course-img bg-1">Front-End Complete</div>
-                <div class="course-info">
-                    <h3>دبلومة تطوير واجهات الويب</h3>
-                    <p>تعلم HTML, CSS, JavaScript, React من الصفر حتى الاحتراف.</p>
-                    <div class="course-footer">
-                        <span class="price">$150</span>
-                        <button class="btn-enroll">سجل الآن</button>
-                    </div>
-                </div>
-            </div>
-            <div class="course-card">
-                <div class="course-img bg-2">UI/UX Design</div>
-                <div class="course-info">
-                    <h3>تصميم واجهات المستخدم</h3>
-                    <p>احتراف برنامج Figma وتصميم تجارب مستخدم مذهلة ومريحة.</p>
-                    <div class="course-footer">
-                       <span class="price">$120</span>
-                        <button class="btn-enroll">سجل الآن</button>
-                    </div>
-                </div>
-            </div>
-            <div class="course-card">
-                <div class="course-img bg-3">JavaScript Master</div>
-                <div class="course-info">
-                    <h3>أساسيات البرمجة المتقدمة</h3>
-                    <p>فهم لغة JavaScript بعمق مع تطبيقات وبناء مشاريع حقيقية.</p>
-                    <div class="course-footer">
-                        <span class="price">$90</span>
-                        <button class="btn-enroll">سجل الآن</button>
+                    </a>
+                    <div class="p-4">
+                        <span class="inline-block bg-emerald-100 text-emerald-700 text-xs px-2.5 py-1 rounded-md font-bold mb-2">اللغة العربية</span>
+                        <h3 class="font-bold text-slate-800 text-base mb-1">الوحدة الأولى نحو - مراجعة كاملة</h3>
+                        <p class="text-slate-500 text-sm">أ/ عبدالله الشهاوي</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    
-    <section id="contact" class="contact-section">
-        <h2 class="section-title">تواصل معنا واستفسر عن مشروعك</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>معلومات التواصل</h3>
-                <p><i class="fa-solid fa-phone"></i> +20 123 456 7890</p>
-                <p><i class="fa-solid fa-envelope"></i> contact@eduspace.com</p>
-                <p><i class="fa-solid fa-location-dot"></i> القاهرة، مصر - متاح عمل عن بُعد</p>
+            
+ 
+    <section id="books" class="py-16 max-w-7xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center text-blue-950 mb-12">كتب ومذكرات السنتر 2026</h2>
+        <div class="grid md:grid-cols-4 gap-6">
+            <div class="bg-white p-4 rounded-xl shadow-sm border text-center">
+                <div class="h-48 bg-slate-100 rounded-lg mb-3 flex items-center justify-center font-bold text-slate-400 overflow-hidden">
+                    <img src="كمياء.jpg" alt="كيمياء" class="w-full h-full object-cover">
+                </div>
+                <h4 class="font-bold">كتاب الشرح - كيمياء 3ث</h4>
+                <p class="text-sm text-slate-500">الجزء الأول</p>
+                <button class="mt-4 w-full bg-blue-50 text-blue-700 py-2 rounded-lg font-bold text-sm hover:bg-blue-100">معاينة PDF</button>
             </div>
-            <form id="contact-form" class="contact-form">
-                <input type="text" id="name" placeholder="اسمك الكريم" required>
-                <input type="email" id="email" placeholder="بريدك الإلكتروني" required>
-                <textarea id="message" placeholder="رسالتك أو تفاصيل الطلب..." rows="4" required></textarea>
-                <button type="submit" class="btn-main">إرسال الرسالة</button>
-            </form>
+            <div class="bg-white p-4 rounded-xl shadow-sm border text-center">
+                <div class="h-48 bg-slate-100 rounded-lg mb-3 flex items-center justify-center font-bold text-slate-400 overflow-hidden">
+                    <img src="تفوق احياء.jpg" alt="التفوق" class="w-full h-full object-cover">
+                </div>
+                <h4 class="font-bold">كتاب التفوق - الأحياء</h4>
+                <p class="text-sm text-slate-500">بنك الأسئلة والتدريبات</p>
+                <button class="mt-4 w-full bg-blue-50 text-blue-700 py-2 rounded-lg font-bold text-sm hover:bg-blue-100">معاينة PDF</button>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border text-center">
+                <div class="h-48 bg-slate-100 rounded-lg mb-3 flex items-center justify-center font-bold text-slate-400 overflow-hidden">
+                    <img src="كتاب عربي.jpg" alt="الامتحان" class="w-full h-full object-cover">
+                </div>
+                <h4 class="font-bold">مذكرة النحو والبالغة</h4>
+                <p class="text-sm text-slate-500">الصف الثالث الثانوي</p>
+                <button class="mt-4 w-full bg-blue-50 text-blue-700 py-2 rounded-lg font-bold text-sm hover:bg-blue-100">معاينة PDF</button>
+            </div>
+            <div class="bg-white p-4 rounded-xl shadow-sm border text-center">
+                <div class="h-48 bg-slate-100 rounded-lg mb-3 flex items-center justify-center font-bold text-slate-400 overflow-hidden">
+                    <img src="درسات.jpg" alt="دراسات" class="w-full h-full object-cover">
+                </div>
+                <h4 class="font-bold">كتاب المراجعة النهائية</h4>
+                <p class="text-sm text-slate-500">تدريبات شاملة</p>
+                <button class="mt-4 w-full bg-blue-50 text-blue-700 py-2 rounded-lg font-bold text-sm hover:bg-blue-100">معاينة PDF</button>
+            </div>
         </div>
     </section>
-    
 
     
-    <footer>
-        <p>جميع الحقوق محفوظة © 2026 | تم التطوير بقلم Front-End Developer محترف</p>
+    <section id="booking" class="py-16 bg-slate-100">
+        <div class="max-w-3xl mx-auto px-6">
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-slate-100">
+                <h2 class="text-2xl font-extrabold text-slate-800 text-center mb-6">احجز مكانك في المجموعات الجديدة</h2>
+                <form id="bookingForm" class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">اسم الطالب رباعي</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-blue-600" placeholder="أحمد محمد محمود">
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">رقم موبايل الطالب</label>
+                            <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-blue-600" placeholder="010XXXXXXXX">
+ </div>
+                        <div>
+                            <label class="block text-sm font-bold text-slate-700 mb-1">رقم ولي الأمر</label>
+                            <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-blue-600" placeholder="011XXXXXXXX">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-slate-700 mb-1">المرحلة الدراسية</label>
+                        <select class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:border-blue-600">
+                            <option>الصف الثالث الثانوي</option>
+                            <option>الصف الثاني الثانوي</option>
+                            <option>الصف الأول الثانوي</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-800 text-white font-bold py-3.5 rounded-xl hover:bg-blue-900 transition shadow-lg mt-4">تأكيد طلب الحجز</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm">
+        <p>© 2026 سنتر التفوق التعليمي - جميع الحقوق محفوظة</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
-</html> 
+</html>
